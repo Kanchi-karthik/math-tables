@@ -9,7 +9,7 @@ const App = () => (
   <Router>
     <div className="app-container">
       <header>
-        <h1>Interactive Math Learning for Autism</h1>
+        <h1>Interactive Math Tables Learning</h1>
         <nav>
           <NavLink to="/" end className={({ isActive }) => isActive ? 'active-link nav-item' : 'nav-item'}>Home</NavLink>
           <NavLink to="/teach" className={({ isActive }) => isActive ? 'active-link nav-item' : 'nav-item'}>Learn Tables</NavLink>
