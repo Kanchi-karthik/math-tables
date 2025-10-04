@@ -1,0 +1,255 @@
+/* Global & Reset */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: #f9f7f1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  color: #334257;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #528ca6;
+  margin-bottom: 0.6rem;
+  text-shadow: 1px 1px 0 #c8d9e6;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 25px;
+  font-weight: 700;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #528ca6;
+  padding: 8px 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active-link {
+  background-color: #528ca6;
+  color: #fff;
+  box-shadow: 0 4px 14px #7ca3ba;
+  cursor: pointer;
+}
+
+/* Main content area */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card style */
+.card {
+  background: #edeff1;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(102, 121, 139, 0.15);
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  user-select: none;
+}
+
+/* Large interactive buttons */
+.btn-large {
+  background-color: #528ca6;
+  border: none;
+  border-radius: 25px;
+  padding: 18px 35px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.22s ease;
+  user-select: none;
+  margin: 10px auto;
+  display: inline-block;
+  min-width: 140px;
+  box-shadow: 0 5px 18px rgba(82, 140, 166, 0.4);
+}
+
+.btn-large:hover {
+  background-color: #37637d;
+  transform: translateY(-3px);
+}
+
+/* Input styles */
+input[type="number"] {
+  width: 70px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid #528ca6;
+  text-align: center;
+  outline: none;
+  user-select: text;
+}
+
+input[type="number"]:focus {
+  border-color: #37637d;
+  box-shadow: 0 0 8px #37637daa;
+}
+
+/* Quiz question style */
+.quiz-question {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 1.5rem 0;
+  color: #37637d;
+}
+
+/* Answer buttons */
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.answer-btn {
+  background-color: #a7c5eb;
+  border: none;
+  border-radius: 22px;
+  padding: 18px 28px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #334257;
+  box-shadow: 0 6px 20px rgba(167, 197, 235, 0.5);
+  cursor: pointer;
+  min-width: 150px;
+  user-select: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+  background-color: #528ca6;
+  color: white;
+  box-shadow: 0 8px 30px #3772aa;
+}
+
+.answer-btn.correct {
+  background-color: #4bb543 !important;
+  color: white !important;
+  box-shadow: 0 8px 30px #3b853a !important;
+  cursor: default;
+}
+
+.answer-btn.wrong {
+  background-color: #dc3545 !important;
+  color: white !important;
+  box-shadow: 0 8px 30px #972a29 !important;
+  cursor: default;
+}
+
+.answer-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Score Badge */
+.score-badge {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #476072;
+  background-color: #d6e4eb;
+  border-radius: 25px;
+  width: 120px;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  box-shadow: 0 6px 18px rgba(55, 99, 136, 0.3);
+  user-select: none;
+}
+
+/* Table with rounded corners */
+.multiplication-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(67, 90, 117, 0.15);
+}
+
+.multiplication-table thead tr th {
+  background: #528ca6;
+  color: white;
+  padding: 18px 0;
+}
+
+.multiplication-table tbody tr {
+  background: #e5f1fb;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.multiplication-table tbody tr:nth-child(even) {
+  background: #f0f7fd;
+}
+
+.multiplication-table tbody tr:hover {
+  background: #74a9d8;
+  color: white;
+  cursor: default;
+}
+
+/* Responsive */
+@media only screen and (max-width: 720px) {
+  .app-container {
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .answer-btn,
+  .btn-large {
+    font-size: 1.4rem;
+    min-width: 110px;
+    padding: 14px 22px;
+  }
+
+  .quiz-question {
+    font-size: 1.8rem;
+  }
+
+  .multiplication-table {
+    font-size: 1.3rem;
+  }
+}
